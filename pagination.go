@@ -64,7 +64,7 @@ func PageableToSlice[T any](pageable Pageable) ([]T, error) {
 		var sample T
 		jsonBytes, err := json.Marshal(value)
 		if err != nil {
-			return []T{}, fmt.Errorf("unable to encodee JSON elements for %T datatype", sample)
+			return []T{}, fmt.Errorf("unable to encode JSON elements for %T datatype", sample)
 		}
 		err = json.Unmarshal(jsonBytes, &sample)
 		if err != nil {
